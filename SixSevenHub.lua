@@ -96,65 +96,8 @@ local function buildGUI(theme)
     createTabBtn("Script Executor", "Executor", 0.33)
     createTabBtn("Fe / Non Fe Scripts", "Scripts", 0.66)
 
-    local homeTab = createTabPage("Home")
-    local execTab = createTabPage("Executor")
-    local scriptTab = createTabPage("Scripts")
-
-    homeTab.Parent = contentHolder
-    execTab.Parent = contentHolder
-    scriptTab.Parent = contentHolder
-
-    -- HOME BUTTONS
-    createButton(homeTab, "GhostHub", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
-    end)
-
-    createButton(homeTab, "Tiger X", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TxTeamXYZ/Main/main/Loader.lua"))()
-    end)
-
-    createButton(homeTab, "G14 Hub", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHubbG14/G14Loader/main/main.lua"))()
-    end)
-
-    -- EXECUTOR
-    local label = Instance.new("TextLabel", execTab)
-    label.Size = UDim2.new(1, -20, 0, 25)
-    label.Position = UDim2.new(0, 10, 0, 0)
-    label.Text = "Execute Custom Script:"
-    label.Font = Enum.Font.Gotham
-    label.TextScaled = true
-    label.TextColor3 = theme.text
-    label.BackgroundTransparency = 1
-
-    local box = Instance.new("TextBox", execTab)
-    box.Size = UDim2.new(1, -20, 0, 100)
-    box.Position = UDim2.new(0, 10, 0, 30)
-    box.Text = "-- enter code here"
-    box.Font = Enum.Font.Code
-    box.TextSize = 14
-    box.TextColor3 = theme.text
-    box.BackgroundColor3 = theme.btn
-    box.ClearTextOnFocus = false
-    box.MultiLine = true
-    box.TextWrapped = true
-    box.TextXAlignment = Enum.TextXAlignment.Left
-    box.TextYAlignment = Enum.TextYAlignment.Top
-
-    createButton(execTab, "Execute", function()
-        loadstring(box.Text)()
-    end)
-
-    -- SCRIPTS TAB
-    createButton(scriptTab, "Fly GUI V3", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/MikaelHub/FlyGuiV3/main/FlyV3.lua"))()
-    end)
-
-    createButton(scriptTab, "Red Laser Gun", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxhubassets/tools/main/LaserGun.lua"))()
-    end)
-
-    for n, f in pairs(tabs) do f.Visible = (n == "Home") end
+    -- Build tab content after setup
+    requireScriptContent()
 end
 
 -- Theme selector
@@ -184,4 +127,71 @@ for i, name in ipairs({"Dark","Blue","Red"}) do
         selector:Destroy()
         buildGUI(themes[name])
     end)
+end
+function requireScriptContent()
+    local homeTab = createTabPage("Home")
+    local execTab = createTabPage("Executor")
+    local scriptTab = createTabPage("Scripts")
+
+    homeTab.Parent = contentHolder
+    execTab.Parent = contentHolder
+    scriptTab.Parent = contentHolder
+
+    -- ✅ HOME TAB BUTTONS
+    createButton(homeTab, "Launch GhostHub", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
+    end)
+
+    createButton(homeTab, "Launch Tiger X", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/BalintTheDevXBack/Universal/main/TigerXHubV4"))()
+    end)
+
+    createButton(homeTab, "Launch G14", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHubbG14/G14Loader/main/main.lua"))()
+    end)
+
+    -- ✅ EXECUTOR TAB
+    local label = Instance.new("TextLabel", execTab)
+    label.Size = UDim2.new(1, -20, 0, 25)
+    label.Position = UDim2.new(0, 10, 0, 0)
+    label.Text = "Execute Custom Script:"
+    label.Font = Enum.Font.Gotham
+    label.TextScaled = true
+    label.TextColor3 = selectedTheme.text
+    label.BackgroundTransparency = 1
+
+    local box = Instance.new("TextBox", execTab)
+    box.Size = UDim2.new(1, -20, 0, 100)
+    box.Position = UDim2.new(0, 10, 0, 30)
+    box.Text = "-- enter code here"
+    box.Font = Enum.Font.Code
+    box.TextSize = 14
+    box.TextColor3 = selectedTheme.text
+    box.BackgroundColor3 = selectedTheme.btn
+    box.ClearTextOnFocus = false
+    box.MultiLine = true
+    box.TextWrapped = true
+    box.TextXAlignment = Enum.TextXAlignment.Left
+    box.TextYAlignment = Enum.TextYAlignment.Top
+
+    createButton(execTab, "Execute", function()
+        local s, e = pcall(function()
+            loadstring(box.Text)()
+        end)
+        if not s then warn("Execution error:", e) end
+    end)
+
+    -- ✅ SCRIPTS TAB
+    createButton(scriptTab, "Fly GUI V3", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MikaelHub/FlyGuiV3/main/FlyV3.lua"))()
+    end)
+
+    createButton(scriptTab, "Red Laser Gun", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxhubassets/tools/main/LaserGun.lua"))()
+    end)
+
+    -- Set default tab
+    for name, tab in pairs(tabs) do
+        tab.Visible = (name == "Home")
+    end
 end
