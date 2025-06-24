@@ -113,8 +113,11 @@ local function buildGUI(theme)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TxTeamXYZ/Main/main/Loader.lua"))()
     end)
 
-    createButton(homeTab, "G14 Hub", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHubbG14/G14Loader/main/main.lua"))()
+    createButton(homeTab, "Rc7 Hub", function()
+        --[[
+            WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+        ]]
+        loadstring(Game:HttpGet("https://raw.githubusercontent.com/avu73923/RC7/refs/heads/main/RC7Nokey"))()
     end)
 
     -- EXECUTOR
@@ -147,11 +150,11 @@ local function buildGUI(theme)
 
     -- SCRIPTS TAB
     createButton(scriptTab, "Fly GUI V3", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/MikaelHub/FlyGuiV3/main/FlyV3.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     end)
 
-    createButton(scriptTab, "Red Laser Gun", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxhubassets/tools/main/LaserGun.lua"))()
+    createButton(scriptTab, "Get All Gears", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/AZVi2tuK"))()
     end)
 
     for n, f in pairs(tabs) do f.Visible = (n == "Home") end
