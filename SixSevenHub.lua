@@ -117,7 +117,7 @@ local function buildGUI(theme)
         --[[
             WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
         ]]
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/avu73923/RC7/refs/heads/main/RC7Nokey"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CoreGui/Scripts/main/RC7"))()
     end)
 
     -- EXECUTOR
