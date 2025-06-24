@@ -4,15 +4,13 @@ local screenGui = Instance.new("ScreenGui", playerGui)
 screenGui.Name = "SixSevenHub"
 screenGui.ResetOnSpawn = false
 
--- Theme Styles
 local themes = {
     Dark = {bg = Color3.fromRGB(25,25,25), btn = Color3.fromRGB(40,40,40), text = Color3.new(1,1,1)},
     Blue = {bg = Color3.fromRGB(20,25,60), btn = Color3.fromRGB(30,60,120), text = Color3.new(1,1,1)},
-    Red =  {bg = Color3.fromRGB(50,0,0),    btn = Color3.fromRGB(140,30,30), text = Color3.new(1,1,1)}
+    Red  = {bg = Color3.fromRGB(50,0,0),    btn = Color3.fromRGB(140,30,30), text = Color3.new(1,1,1)}
 }
 local selectedTheme = themes.Dark
 
--- Toggle Button (hidden until theme picked)
 local toggleBtn = Instance.new("TextButton", screenGui)
 toggleBtn.Size = UDim2.new(0, 100, 0, 40)
 toggleBtn.Position = UDim2.new(0, 10, 0.5, -20)
@@ -21,7 +19,6 @@ toggleBtn.Font = Enum.Font.GothamBold
 toggleBtn.TextColor3 = Color3.new(1,1,1)
 toggleBtn.Visible = false
 
--- Top Footer
 local footer = Instance.new("TextLabel", screenGui)
 footer.Text = "SixSeven Script Made By Gustavo199140"
 footer.Font = Enum.Font.GothamSemibold
@@ -31,7 +28,6 @@ footer.Size = UDim2.new(0, 250, 0, 20)
 footer.Position = UDim2.new(0.5, -125, 0, 20)
 footer.BackgroundTransparency = 1
 
--- Main GUI Wrapper
 local wrapper = Instance.new("Frame", screenGui)
 wrapper.Size = UDim2.new(0, 270, 0, 420)
 wrapper.Position = UDim2.new(0.5, -135, 0.5, -210)
@@ -41,22 +37,19 @@ wrapper.Active = true
 wrapper.Draggable = true
 wrapper.Visible = false
 
--- Header
 local header = Instance.new("TextLabel", wrapper)
 header.Size = UDim2.new(1, 0, 0, 40)
 header.Text = "SixSeven Hub 6️⃣7️⃣"
 header.Font = Enum.Font.GothamBold
-header.TextColor3 = Color3.new(1,1,1)
 header.TextScaled = true
+header.TextColor3 = Color3.new(1,1,1)
 header.BackgroundTransparency = 1
 
--- Tab Bar
 local tabBar = Instance.new("Frame", wrapper)
 tabBar.Size = UDim2.new(1, 0, 0, 35)
 tabBar.Position = UDim2.new(0, 0, 0, 40)
 tabBar.BackgroundTransparency = 1
 
--- Section Pages
 local contentHolder = Instance.new("Frame", wrapper)
 contentHolder.Size = UDim2.new(1, 0, 1, -75)
 contentHolder.Position = UDim2.new(0, 0, 0, 75)
@@ -75,7 +68,6 @@ local function createTabPage(name)
     scroll.CanvasSize = UDim2.new(0, 0, 0, 1000)
     scroll.ScrollBarThickness = 6
     scroll.BackgroundTransparency = 1
-    scroll.Visible = false
     local layout = Instance.new("UIListLayout", scroll)
     layout.Padding = UDim.new(0, 10)
     tabs[name] = scroll
@@ -94,7 +86,6 @@ local function createTabBtn(label, tabName, position)
     btn.MouseButton1Click:Connect(function() switchTab(tabName) end)
 end
 
--- Theme Picker UI
 local themeFrame = Instance.new("Frame", screenGui)
 themeFrame.Size = UDim2.new(0, 250, 0, 200)
 themeFrame.Position = UDim2.new(0.5, -125, 0.5, -100)
@@ -136,7 +127,7 @@ createThemeBtn("Red", 150, "Red")
 toggleBtn.MouseButton1Click:Connect(function()
     wrapper.Visible = not wrapper.Visible
 end)
--- Create Section Helper
+-- Section Helper
 local function createButton(parent, text, callback)
     local btn = Instance.new("TextButton", parent)
     btn.Size = UDim2.new(1, -20, 0, 40)
@@ -150,23 +141,24 @@ local function createButton(parent, text, callback)
     return btn
 end
 
--- Tabs
+-- TABS
 createTabBtn("Home", "Home", 0)
 createTabBtn("Script Executor", "Executor", 0.33)
 createTabBtn("Fe / Non Fe Scripts", "Scripts", 0.66)
 
 -- HOME TAB
 local homeTab = createTabPage("Home")
+
 createButton(homeTab, "Launch GhostHub", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
 end)
 
 createButton(homeTab, "Launch Tiger X", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TigerXOfficial/Main/main/TigerXLoader.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TxTeamXYZ/Main/main/Loader.lua"))()
 end)
 
 createButton(homeTab, "Launch G14", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/G14Hub/G14/main/G14Loader.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHubbG14/G14Loader/main/main.lua"))()
 end)
 
 -- EXECUTOR TAB
@@ -204,13 +196,14 @@ createButton(execTab, "Execute", function()
     end
 end)
 
--- SCRIPTS TAB (Fe / Non Fe)
+-- SCRIPTS TAB
 local scriptTab = createTabPage("Scripts")
 
 createButton(scriptTab, "Fly GUI V3", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/FlyGuiV3.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MikaelHub/FlyGuiV3/main/FlyV3.lua"))()
 end)
 
 createButton(scriptTab, "Red Laser Gun Gear", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/FM0tbkMA"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxhubassets/tools/main/LaserGun.lua"))()
 end)
+
