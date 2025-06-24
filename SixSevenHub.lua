@@ -209,3 +209,65 @@ function requireScriptContent()
         frame.Visible = (name == "Home")
     end
 end
+function requireScriptContent()
+    local function createButton(parent, text, callback)
+        local btn = Instance.new("TextButton", parent)
+        btn.Size = UDim2.new(1, -20, 0, 40)
+        btn.Position = UDim2.new(0, 10, 0, 0)
+        btn.Text = text
+        btn.Font = Enum.Font.GothamSemibold
+        btn.TextScaled = true
+        btn.TextColor3 = selectedTheme.text
+        btn.BackgroundColor3 = selectedTheme.btn
+        btn.MouseButton1Click:Connect(function()
+            print("Clicked:", text)
+            local s, e = pcall(callback)
+            if not s then warn("Error:", e) end
+        end)
+    end
+
+    -- Tabs
+    local homeTab = createTabPage("Home")
+    local execTab = createTabPage("Executor")
+    local scriptTab = createTabPage("Scripts")
+
+    homeTab.Parent = contentHolder
+    execTab.Parent = contentHolder
+    scriptTab.Parent = contentHolder
+
+    -- HOME Buttons
+    createButton(homeTab, "Launch GhostHub", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
+    end)
+
+    createButton(homeTab, "Launch Tiger X", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TxTeamXYZ/Main/main/Loader.lua"))()
+    end)
+
+    createButton(homeTab, "Launch G14", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHubbG14/G14Loader/main/main.lua"))()
+    end)
+
+    -- EXECUTOR
+    local label = Instance.new("TextLabel", execTab)
+    label.Size = UDim2.new(1, -20, 0, 25)
+    label.Position = UDim2.new(0, 10, 0, 0)
+    label.Text = "Execute Custom Script:"
+    label.Font = Enum.Font.Gotham
+    label.TextScaled = true
+    label.TextColor3 = selectedTheme.text
+    label.BackgroundTransparency = 1
+
+    local box = Instance.new("TextBox", execTab)
+    box.Size = UDim2.new(1, -20, 0, 100)
+    box.Position = UDim2.new(0, 10, 0, 30)
+    box.Text = "-- enter code here"
+    box.Font = Enum.Font.Code
+    box.TextSize = 14
+    box.TextColor3 = selectedTheme.text
+    box.BackgroundColor3 = selectedTheme.btn
+    box.ClearTextOnFocus = false
+    box.MultiLine = true
+    box.TextWrapped = true
+    box.TextXAlignment = Enum.TextXAlignment.Left
+    box.TextYAlignment = Enum.TextYAlignment.Top
