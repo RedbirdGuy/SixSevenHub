@@ -136,7 +136,7 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
 end)
 
-
+end
 
     -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
