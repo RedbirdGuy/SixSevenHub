@@ -165,6 +165,11 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua", true))()
 end)
 
+    createButton(homeTab, "Red Hyperlaser Gun", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Red-hyperlaser-gun-24963"))()
+end)
+
+
 
     for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
