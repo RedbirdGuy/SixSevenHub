@@ -136,7 +136,7 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
 end)
 
-
+end
 
     -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
@@ -185,7 +185,7 @@ end)
             createButton(scriptTab, "Grab Knife V4", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
 end)
-        end
+end
 
  for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
