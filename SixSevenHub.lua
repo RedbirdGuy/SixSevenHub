@@ -128,6 +128,15 @@ end)
     loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/3e50ce0fdd03713dfbeb1845ee6f52d7/raw/630318908f56a984db9568a89e33eadb7998158a/feutg1", true))()
 end)
 
+    createButton(homeTab, "c00lgui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/theawesomari0/c00lgui/main/c00lgui%20v2.3", true))()
+end)
+
+    createButton(homeTab, "AquaMatrix", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
+end)
+
+
 
     -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
@@ -172,11 +181,12 @@ end)
 
     createButton(scriptTab, "Red Hyperlaser Gun", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Red-hyperlaser-gun-24963"))()
+
+            createButton(scriptTab, "Grab Knife V4", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
 end)
 
-
-
-    for n, f in pairs(tabs) do f.Visible = (n == "Home") end
+ for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
 
 -- Theme selector
