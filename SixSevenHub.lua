@@ -165,7 +165,7 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua", true))()
 end)
 
-    createButton(homeTab, "Red Hyperlaser Gun", function()
+    createButton(scriptTab, "Red Hyperlaser Gun", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Red-hyperlaser-gun-24963"))()
 end)
 
