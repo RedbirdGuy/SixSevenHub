@@ -110,7 +110,7 @@ local function buildGUI(theme)
     end)
 
     createButton(homeTab, "Tiger X", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TxTeamXYZ/Main/main/Loader.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/BalintTheDevXBack/Universal/refs/heads/main/TigerXHubV4"))()
     end)
 
     createButton(homeTab, "Rc7 Hub", function()
