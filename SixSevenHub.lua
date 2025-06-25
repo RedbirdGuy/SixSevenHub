@@ -185,6 +185,7 @@ end)
             createButton(scriptTab, "Grab Knife V4", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
 end)
+        end
 
  for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
