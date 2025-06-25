@@ -157,6 +157,11 @@ local function buildGUI(theme)
         loadstring(game:HttpGet("https://pastebin.com/raw/AZVi2tuK"))()
     end)
 
+    createButton(scriptTab, "AnnaBypasser", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua", true))()
+end)
+
+
     for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
 
