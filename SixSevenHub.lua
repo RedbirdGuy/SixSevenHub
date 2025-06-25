@@ -56,7 +56,6 @@ local function buildGUI(theme)
     header.TextScaled = true
     header.TextColor3 = theme.text
     header.BackgroundTransparency = 1
-
     local tabBar = Instance.new("Frame", wrapper)
     tabBar.Size = UDim2.new(1, 0, 0, 35)
     tabBar.Position = UDim2.new(0, 0, 0, 40)
@@ -88,7 +87,9 @@ local function buildGUI(theme)
         b.TextColor3 = theme.text
         b.BackgroundColor3 = theme.btn
         b.MouseButton1Click:Connect(function()
-            for t, frame in pairs(tabs) do frame.Visible = (t == name) end
+            for t, frame in pairs(tabs) do
+                frame.Visible = (t == name)
+            end
         end)
     end
 
@@ -103,7 +104,6 @@ local function buildGUI(theme)
     homeTab.Parent = contentHolder
     execTab.Parent = contentHolder
     scriptTab.Parent = contentHolder
-
     -- HOME BUTTONS
     createButton(homeTab, "GhostHub", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
@@ -114,29 +114,24 @@ local function buildGUI(theme)
     end)
 
     createButton(homeTab, "Rc7 Hub", function()
-        --[[
-            WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-        ]]
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CoreGui/Scripts/main/RC7"))()
     end)
 
     createButton(homeTab, "Infinite Yield", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-end)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end)
 
     createButton(homeTab, "FE Ultimate Trolling GUI", function()
-    loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/3e50ce0fdd03713dfbeb1845ee6f52d7/raw/630318908f56a984db9568a89e33eadb7998158a/feutg1", true))()
-end)
+        loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/3e50ce0fdd03713dfbeb1845ee6f52d7/raw/630318908f56a984db9568a89e33eadb7998158a/feutg1", true))()
+    end)
 
     createButton(homeTab, "c00lgui", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/theawesomari0/c00lgui/main/c00lgui%20v2.3", true))()
-end)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/theawesomari0/c00lgui/main/c00lgui%20v2.3", true))()
+    end)
 
     createButton(homeTab, "AquaMatrix", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
-end)
-
-end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
+    end)
 
     -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
@@ -165,7 +160,6 @@ end
     createButton(execTab, "Execute", function()
         loadstring(box.Text)()
     end)
-
     -- SCRIPTS TAB
     createButton(scriptTab, "Fly GUI V3", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
@@ -176,21 +170,21 @@ end
     end)
 
     createButton(scriptTab, "AnnaBypasser", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua", true))()
-end)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua", true))()
+    end)
 
     createButton(scriptTab, "Red Hyperlaser Gun", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Red-hyperlaser-gun-24963"))()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Red-hyperlaser-gun-24963"))()
+    end)
 
-            createButton(scriptTab, "Grab Knife V4", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
-end)
+    createButton(scriptTab, "Grab Knife V4", function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
+    end)
+
+    for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
 
- for n, f in pairs(tabs) do f.Visible = (n == "Home") end
-end
-
--- Theme selector
+-- THEME SELECTOR
 local selector = Instance.new("Frame", screenGui)
 selector.Size = UDim2.new(0, 250, 0, 200)
 selector.Position = UDim2.new(0.5, -125, 0.5, -100)
