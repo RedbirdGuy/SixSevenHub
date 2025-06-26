@@ -217,6 +217,10 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
 end)
 
+    createButton(scriptTab, "team8x8x8x8 Music Player", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/mmtFvDJZ", true))()
+end)
+
 for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
 
