@@ -133,10 +133,9 @@ local function buildGUI(theme)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
     end)
 
-    createButton(homeTab, "c00lgui", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/tQZYjYV0"))()
+createButton(homeTab, "c00lgui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"))()
 end)
-
 
     -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
