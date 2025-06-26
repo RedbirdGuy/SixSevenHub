@@ -141,7 +141,7 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/IvanTheProtogen/BackdoorLegacy/main/main.lua"))()
 end)
 
-    createButton(homeTab, "Koopkidd GUI", function()
+    createButton(homeTab, "Koopkidd GUI * works in backdoor *", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/MDhZWF0P"))()
 end)
 
