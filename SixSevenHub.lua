@@ -125,11 +125,7 @@ local function buildGUI(theme)
         loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/3e50ce0fdd03713dfbeb1845ee6f52d7/raw/630318908f56a984db9568a89e33eadb7998158a/feutg1", true))()
     end)
 
-    createButton(homeTab, "c00lgui", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/theawesomari0/c00lgui/main/c00lgui%20v2.3", true))()
-    end)
-
-    createButton(homeTab, "AquaMatrix", function()
+createButton(homeTab, "AquaMatrix", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
     end)
 
