@@ -133,6 +133,11 @@ createButton(homeTab, "AquaMatrix", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/c00lgui/main/CoolGui.lua"))()
 end)
 
+    createButton(homeTab, "Sheldoni Backdoor", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JustSimpleRobloxCoder/Project-sigma/refs/heads/main/Sheldoni%20Backdoor.lua.txt"))()
+end)
+
+
  -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
