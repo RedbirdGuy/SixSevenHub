@@ -213,8 +213,8 @@ end)
     loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Mafioso-moveset-42115"))()
 end)
 
-    createButton(scriptTab, "Delta Keyboard", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Delta-Keyboard-29097"))()
+    createButton(scriptTab, "Delta Keyboard (Cracked)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
 end)
 
 for n, f in pairs(tabs) do f.Visible = (n == "Home") end
