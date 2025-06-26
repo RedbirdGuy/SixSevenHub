@@ -145,7 +145,11 @@ end)
         loadstring(game:HttpGet("https://pastebin.com/raw/MDhZWF0P"))()
 end)
 
-    -- EXECUTOR
+    createButton(homeTab, "Xarus SS", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NikSavchenko3/Xarus-SS/main/XarusSS.lua"))()
+end)
+
+ -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
     label.Position = UDim2.new(0, 10, 0, 0)
