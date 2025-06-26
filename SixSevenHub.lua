@@ -137,6 +137,9 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JustSimpleRobloxCoder/Project-sigma/refs/heads/main/Sheldoni%20Backdoor.lua.txt"))()
 end)
 
+    createButton(homeTab, "BackdoorLegacy (LALOL Hub)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IvanTheProtogen/BackdoorLegacy/main/main.lua"))()
+end)
 
  -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
