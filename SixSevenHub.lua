@@ -129,11 +129,11 @@ createButton(homeTab, "AquaMatrix", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
     end)
 
-createButton(homeTab, "c00lgui", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"))()
+    createButton(homeTab, "c00lgui (Hyperion)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperionhax/c00lgui/main/CoolGui.lua"))()
 end)
 
-    -- EXECUTOR
+  -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
     label.Position = UDim2.new(0, 10, 0, 0)
