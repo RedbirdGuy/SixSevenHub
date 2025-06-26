@@ -193,7 +193,27 @@ end)
         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
     end)
 
-    for n, f in pairs(tabs) do f.Visible = (n == "Home") end
+    createButton(scriptTab, "John Doe Script", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/zMB2Q5vR"))()
+end)
+
+    createButton(scriptTab, "AK-47 Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/ak47", true))()
+end)
+
+    createButton(scriptTab, "Monster Mash Tool", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Monster-Mash-Tool-Script-24283"))()
+end)
+
+    createButton(scriptTab, "FE R6 Animation GUI", function()
+    loadstring(game:HttpGet("https://github.com/Sinister-Scripts/Roblox-Exploits/raw/refs/heads/main/FE-Animation-GUI-R6"))()
+end)
+
+    createButton(scriptTab, "Mafioso Moveset", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Mafioso-moveset-42115"))()
+end)
+
+for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
 
 -- THEME SELECTOR
