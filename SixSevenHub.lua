@@ -141,8 +141,8 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/IvanTheProtogen/BackdoorLegacy/main/main.lua"))()
 end)
 
-    createButton(homeTab, "k00pkidd F3X", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/K00PZISBACK/k00pgui/main/k00pz%20f3x.lua"))()
+    createButton(homeTab, "Ultimate Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XziuhxPlay/ROBLOX-SCRIPTS/main/lol.lua", true))()
 end)
 
 createButton(homeTab, "Project Ligma", function()
