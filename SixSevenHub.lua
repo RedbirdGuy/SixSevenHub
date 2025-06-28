@@ -159,15 +159,11 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaGunsX/LuasLegacyScripts/main/%5BGUI%5D%20Ro-Xploit%206.0", true))()
 end)
 
-    createButton(homeTab, "Topk3k GUI", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/CCLEntXs"))()
-end)
-
     createButton(homeTab, "HerbertV1", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaGunsX/HerbertV1/main/main.lua", true))()
 end)
 
--- EXECUTOR
+  -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
     label.Position = UDim2.new(0, 10, 0, 0)
