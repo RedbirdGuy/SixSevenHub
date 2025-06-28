@@ -155,6 +155,10 @@ end)
 loadstring(game:HttpGet("https://pastefy.app/PxpP9rPH/raw"))()
 end)
 
+    createButton(homeTab, "Ro-Xploit 6.0", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaGunsX/LuasLegacyScripts/main/%5BGUI%5D%20Ro-Xploit%206.0", true))()
+end)
+
   -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
