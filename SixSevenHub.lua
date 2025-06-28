@@ -155,12 +155,6 @@ end)
 loadstring(game:HttpGet("https://pastefy.app/PxpP9rPH/raw"))()
 end)
 
-    --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L", true))()
-
   -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
