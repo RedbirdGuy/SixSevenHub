@@ -155,6 +155,12 @@ end)
 loadstring(game:HttpGet("https://pastefy.app/PxpP9rPH/raw"))()
 end)
 
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L", true))()
+
   -- EXECUTOR
     local label = Instance.new("TextLabel", execTab)
     label.Size = UDim2.new(1, -20, 0, 25)
@@ -229,10 +235,6 @@ end)
 
     createButton(scriptTab, "team8x8x8x8 Music Player", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/mmtFvDJZ", true))()
-end)
-
-    createButton(homeTab, "Luau x SS v3", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L", true))()
 end)
 
 for n, f in pairs(tabs) do f.Visible = (n == "Home") end
