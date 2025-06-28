@@ -155,11 +155,7 @@ end)
 loadstring(game:HttpGet("https://pastefy.app/PxpP9rPH/raw"))()
 end)
 
-    createButton(homeTab, "Ro-Xploit 6.0", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaGunsX/LuasLegacyScripts/main/%5BGUI%5D%20Ro-Xploit%206.0", true))()
-end)
-
-    createButton(homeTab, "HerbertV1", function()
+  createButton(homeTab, "HerbertV1", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaGunsX/HerbertV1/main/main.lua", true))()
 end)
 
