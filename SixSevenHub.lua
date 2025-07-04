@@ -231,8 +231,8 @@ end)
     loadstring(game:HttpGet("https://pastebin.com/raw/mmtFvDJZ", true))()
 end)
 
-    createButton(homeTab, "ScriptBlox Searcher", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher"))()
+    createButton(scriptTab, "Chatbot Assistant", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
 end)
 
 for n, f in pairs(tabs) do f.Visible = (n == "Home") end
