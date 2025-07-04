@@ -50,18 +50,23 @@ local function buildGUI(theme)
     wrapper.Draggable = true
 
     local header = Instance.new("TextLabel", wrapper)
-    header.Size = UDim2.new(1, 0, 0, 40)
-    header.Text = "SixSeven Hub 6️⃣7️⃣"
-    header.Font = Enum.Font.GothamBold
-    header.TextScaled = true
-    header.TextColor3 = theme.text
-    header.BackgroundTransparency = 1
-    local tabBar = Instance.new("Frame", wrapper)
-    tabBar.Size = UDim2.new(1, 0, 0, 35)
-    tabBar.Position = UDim2.new(0, 0, 0, 40)
-    tabBar.BackgroundTransparency = 1
+header.Size = UDim2.new(1, 0, 0, 40)
+header.Text = "SixSeven Hub 6️⃣7️⃣"
+header.Font = Enum.Font.GothamBold
+header.TextScaled = true
+header.TextColor3 = theme.text
+header.BackgroundTransparency = 1
 
-    contentHolder = Instance.new("Frame", wrapper)
+-- 🥓 Toggle GUI title between "SixSeven Hub" and "Bacon Hub"
+local toggled = false
+header.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        toggled = not toggled
+        header.Text = toggled and "Bacon Hub 🥓" or "SixSeven Hub 6️⃣7️⃣"
+    end
+end)
+
+ contentHolder = Instance.new("Frame", wrapper)
     contentHolder.Size = UDim2.new(1, 0, 1, -75)
     contentHolder.Position = UDim2.new(0, 0, 0, 75)
     contentHolder.BackgroundTransparency = 1
