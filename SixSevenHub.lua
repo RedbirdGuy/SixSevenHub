@@ -7,7 +7,6 @@ local themes = {
     Dark = {bg = Color3.fromRGB(25,25,25), btn = Color3.fromRGB(40,40,40), text = Color3.new(1,1,1)},
     Blue = {bg = Color3.fromRGB(20,25,60), btn = Color3.fromRGB(30,60,120), text = Color3.new(1,1,1)},
     Red  = {bg = Color3.fromRGB(50,0,0),    btn = Color3.fromRGB(140,30,30), text = Color3.new(1,1,1)}
-    Green = {bg = Color3.fromRGB(20,40,20), btn = Color3.fromRGB(40,100,40), text = Color3.new(1,1,1)}
 }
 local selectedTheme = themes.Dark
 local wrapper, toggleBtn, contentHolder, tabs = nil, nil, nil, {}
@@ -253,7 +252,7 @@ label.TextScaled = true
 label.TextColor3 = Color3.new(1,1,1)
 label.BackgroundTransparency = 1
 
-for i, name in ipairs({"Dark","Blue","Red","Green"}) do
+for i, name in ipairs({"Dark","Blue","Red"}) do
     local btn = Instance.new("TextButton", selector)
     btn.Size = UDim2.new(0.9, 0, 0, 40)
     btn.Position = UDim2.new(0.05, 0, 0, 40 + (i-1)*50)
