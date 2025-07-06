@@ -253,7 +253,7 @@ label.TextScaled = true
 label.TextColor3 = Color3.new(1,1,1)
 label.BackgroundTransparency = 1
 
-for i, name in ipairs({"Dark","Blue","Red"}) do
+for i, name in ipairs({"Dark","Blue","Red","Green"}) do
     local btn = Instance.new("TextButton", selector)
     btn.Size = UDim2.new(0.9, 0, 0, 40)
     btn.Position = UDim2.new(0.05, 0, 0, 40 + (i-1)*50)
