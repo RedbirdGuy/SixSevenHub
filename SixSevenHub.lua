@@ -7,6 +7,7 @@ local themes = {
     Dark = {bg = Color3.fromRGB(25,25,25), btn = Color3.fromRGB(40,40,40), text = Color3.new(1,1,1)},
     Blue = {bg = Color3.fromRGB(20,25,60), btn = Color3.fromRGB(30,60,120), text = Color3.new(1,1,1)},
     Red  = {bg = Color3.fromRGB(50,0,0),    btn = Color3.fromRGB(140,30,30), text = Color3.new(1,1,1)}
+    Green = {bg = Color3.fromRGB(20,40,20), btn = Color3.fromRGB(40,100,40), text = Color3.new(1,1,1)}
 }
 local selectedTheme = themes.Dark
 local wrapper, toggleBtn, contentHolder, tabs = nil, nil, nil, {}
