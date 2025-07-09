@@ -234,6 +234,9 @@ end)
     createButton(scriptTab, "Chatbot Assistant", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
 end)
+    createButton(scriptTab, "True SS Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/C00LMelon/True-SS-Hub/main/Protected.lua%20(4).txt", true))()
+end)
 
 for n, f in pairs(tabs) do f.Visible = (n == "Home") end
 end
