@@ -105,11 +105,14 @@ local function buildGUI(theme)
     execTab.Parent = contentHolder
     scriptTab.Parent = contentHolder
     -- HOME BUTTONS
-    createButton(homeTab, "GhostHub", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostHubScriptDev/GhostHub/main/GhostHub.lua"))()
+createButton(homeTab, "GhostHub", function()
+    --[[
+        WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+    ]]
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
 end)
 
-  createButton(homeTab, "Tiger X v3.5", function()
+ createButton(homeTab, "Tiger X v3.5", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tiger-hub-x-v35-17788"))()
 end)
 
